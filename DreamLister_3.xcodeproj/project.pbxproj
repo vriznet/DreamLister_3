@@ -23,6 +23,7 @@
 		9B66C75320E8B8DC0074F17B /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66C74B20E8B8DC0074F17B /* Image+CoreDataClass.swift */; };
 		9B66C75420E8B8DC0074F17B /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66C74C20E8B8DC0074F17B /* Image+CoreDataProperties.swift */; };
 		9B66C75A20E8B9D10074F17B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66C75920E8B9D10074F17B /* CustomTextField.swift */; };
+		9B66C75C20E8E8F50074F17B /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66C75B20E8E8F50074F17B /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		9B66C74B20E8B8DC0074F17B /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9B66C74C20E8B8DC0074F17B /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9B66C75920E8B9D10074F17B /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		9B66C75B20E8E8F50074F17B /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +78,9 @@
 		9B66C72D20E8B6AF0074F17B /* DreamLister_3 */ = {
 			isa = PBXGroup;
 			children = (
-				9B66C75720E8B8F20074F17B /* Controller */,
-				9B66C75620E8B8ED0074F17B /* View */,
 				9B66C75520E8B8E10074F17B /* Model */,
+				9B66C75620E8B8ED0074F17B /* View */,
+				9B66C75720E8B8F20074F17B /* Controller */,
 				9B66C72E20E8B6AF0074F17B /* AppDelegate.swift */,
 				9B66C73220E8B6AF0074F17B /* Main.storyboard */,
 				9B66C73820E8B6B10074F17B /* Assets.xcassets */,
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				9B66C75920E8B9D10074F17B /* CustomTextField.swift */,
+				9B66C75B20E8E8F50074F17B /* ItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B66C75C20E8E8F50074F17B /* ItemCell.swift in Sources */,
 				9B66C74F20E8B8DC0074F17B /* ItemType+CoreDataClass.swift in Sources */,
 				9B66C73720E8B6AF0074F17B /* DreamLister_3.xcdatamodeld in Sources */,
 				9B66C73120E8B6AF0074F17B /* MainVC.swift in Sources */,

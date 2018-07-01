@@ -35,7 +35,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" id="UTw-Z8-lb1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" id="UTw-Z8-lb1" customClass="ItemCell" customModule="DreamLister_3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UTw-Z8-lb1" id="ybb-26-fvd">
@@ -103,6 +103,12 @@
                                                 <constraint firstAttribute="trailing" secondItem="tsl-Uh-SEJ" secondAttribute="trailing" constant="10" id="wZk-zk-OnQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailsLbl" destination="4Na-JD-1BC" id="bcF-uG-dpT"/>
+                                            <outlet property="priceLbl" destination="kvW-oq-bXk" id="WJD-Mk-CZ7"/>
+                                            <outlet property="thumbImg" destination="s8f-N9-JNs" id="z8J-it-z32"/>
+                                            <outlet property="titleLbl" destination="0aM-cp-m0M" id="U4b-g4-QgC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

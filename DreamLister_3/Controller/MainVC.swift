@@ -23,17 +23,32 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UITableViewDeleg
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        generateTestData()
+        attemptFetch()
     }
     
     // tableView functions
     func numberOfSections(in tableView: UITableView) -> Int {
+        if let sections = controller.sections{
+            return sections.count
+        }
         return 0
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let sections = controller.sections{
+            let sectionInfo = sections[section]
+            return sectionInfo.numberOfObjects
+        }
         return 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as? ItemCell{
+            configureCell(cell: cell, indexPath: indexPath)
+            return cell
+        }else{
+            return UITableViewCell()
+        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -64,7 +79,11 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UITableViewDeleg
             }
             break
         case.update:
-            // update cell
+            if let indexPath = indexPath{
+                if let cell = tableView.cellForRow(at: indexPath) as? ItemCell{
+                    configureCell(cell: cell, indexPath: indexPath)
+                }
+            }
             break
         }
     }
@@ -90,6 +109,20 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UITableViewDeleg
             let error = error as NSError
             print(error)
         }
+    }
+    func configureCell(cell: ItemCell, indexPath: IndexPath){
+        let item = controller.object(at: indexPath)
+        cell.configureCell(item: item)
+    }
+    func generateTestData(){
+        let item1 = Item(context: context)
+        item1.title = "Surface Book 2"
+        item1.price = 3999
+        item1.details = "Finally I got this!"
+        let item2 = Item(context: context)
+        item2.title = "BMW Z4"
+        item2.price = 100000
+        item2.details = "My First Dream Car"
     }
 }
 
