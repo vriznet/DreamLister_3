@@ -18,7 +18,7 @@
         <relationship name="toItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="toItemType" inverseEntity="Item" syncable="YES"/>
     </entity>
     <entity name="Store" representedClassName=".Store" syncable="YES">
-        <attribute name="name" optional="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="toItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="toStore" inverseEntity="Item" syncable="YES"/>
     </entity>
     <elements>

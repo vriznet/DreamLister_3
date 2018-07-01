@@ -22,6 +22,7 @@
 		9B66C75220E8B8DC0074F17B /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66C74A20E8B8DC0074F17B /* Store+CoreDataProperties.swift */; };
 		9B66C75320E8B8DC0074F17B /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66C74B20E8B8DC0074F17B /* Image+CoreDataClass.swift */; };
 		9B66C75420E8B8DC0074F17B /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66C74C20E8B8DC0074F17B /* Image+CoreDataProperties.swift */; };
+		9B66C75A20E8B9D10074F17B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66C75920E8B9D10074F17B /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9B66C74A20E8B8DC0074F17B /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9B66C74B20E8B8DC0074F17B /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9B66C74C20E8B8DC0074F17B /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9B66C75920E8B9D10074F17B /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		9B66C75620E8B8ED0074F17B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9B66C75920E8B9D10074F17B /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				9B66C72F20E8B6AF0074F17B /* AppDelegate.swift in Sources */,
 				9B66C75120E8B8DC0074F17B /* Store+CoreDataClass.swift in Sources */,
 				9B66C75020E8B8DC0074F17B /* ItemType+CoreDataProperties.swift in Sources */,
+				9B66C75A20E8B9D10074F17B /* CustomTextField.swift in Sources */,
 				9B66C74E20E8B8DC0074F17B /* Item+CoreDataProperties.swift in Sources */,
 				9B66C75320E8B8DC0074F17B /* Image+CoreDataClass.swift in Sources */,
 				9B66C75420E8B8DC0074F17B /* Image+CoreDataProperties.swift in Sources */,
