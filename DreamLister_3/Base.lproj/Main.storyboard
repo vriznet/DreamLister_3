@@ -122,6 +122,10 @@
                     <navigationItem key="navigationItem" title="DreamLister" id="dJg-sJ-Yoi">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yJp-Rt-Qav"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segment" destination="Zkj-hX-cL5" id="ti1-wf-7Hw"/>
+                        <outlet property="tableView" destination="WM0-B5-xu5" id="bBZ-DF-bEQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
