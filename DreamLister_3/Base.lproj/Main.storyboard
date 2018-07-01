@@ -278,7 +278,11 @@
                         <viewLayoutGuide key="safeArea" id="dzN-nt-uhC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add/Edit" id="rdw-PV-fmS">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="7T6-jJ-fcx"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="7T6-jJ-fcx">
+                            <connections>
+                                <action selector="deletePressed:" destination="iwe-DR-lgp" id="ge3-WR-rA9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailsField" destination="CX9-4b-av7" id="dne-Lg-DD3"/>
