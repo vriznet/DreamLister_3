@@ -169,6 +169,9 @@
                                     <constraint firstAttribute="width" constant="68" id="HTJ-1n-fIA"/>
                                     <constraint firstAttribute="height" constant="68" id="c3p-qt-Exa"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="addImage:" destination="iwe-DR-lgp" eventType="touchUpInside" id="Sdk-Kr-7Hu"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAP-CW-jur" customClass="CustomTextField" customModule="DreamLister_3" customModuleProvider="target">
                                 <rect key="frame" x="92" y="74" width="267" height="30"/>

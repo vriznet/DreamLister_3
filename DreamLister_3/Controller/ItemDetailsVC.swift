@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate {
     // IBOutlets
     @IBOutlet weak var thumbImg: UIImageView!
     @IBOutlet weak var titleField: CustomTextField!
@@ -26,6 +26,8 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
     
     var itemToEdit: Item!
     
+    var imagePicker: UIImagePickerController!
+    
     // overrided ViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,9 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
         storePicker.dataSource = self
         typePicker.delegate = self
         typePicker.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
         
         generateTestComponents()
         getStores()
@@ -68,14 +73,25 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
         return ""
     }
     
+    // imagePicker
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            thumbImg.image = image
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
     // IBActions
     @IBAction func savePressed(_ sender: UIButton) {
         let item: Item!
+        let picture = Image(context: context)
+        picture.image = thumbImg.image
         if itemToEdit != nil{
             item = itemToEdit
         }else{
             item = Item(context: context)
         }
+        item.toImage = picture
         if let title = titleField.text{
             item.title = title
         }
@@ -99,6 +115,9 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
             ad.saveContext()
         }
         navigationController?.popViewController(animated: true)
+    }
+    @IBAction func addImage(_ sender: UIButton) {
+        present(imagePicker, animated: true, completion: nil)
     }
     
     // custom functions
@@ -124,6 +143,7 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
     }
     func loadItemData(){
         if let item = itemToEdit{
+            thumbImg.image = item.toImage?.image as? UIImage
             titleField.text = item.title
             priceField.text = "\(item.price)"
             detailsField.text = item.details
