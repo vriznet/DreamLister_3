@@ -175,7 +175,6 @@
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ixk-XW-Hf2"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="jcN-Lb-56S"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -185,7 +184,6 @@
                                 <rect key="frame" x="92" y="112" width="267" height="30"/>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="5wF-Rg-xO7"/>
                                     <constraint firstAttribute="height" constant="30" id="9CC-eZ-ham"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -279,6 +277,14 @@
                     <navigationItem key="navigationItem" title="Add/Edit" id="rdw-PV-fmS">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="7T6-jJ-fcx"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detailsField" destination="CX9-4b-av7" id="dne-Lg-DD3"/>
+                        <outlet property="priceField" destination="TnK-xc-sJE" id="I6x-qW-OGf"/>
+                        <outlet property="storePicker" destination="VIR-aH-S9N" id="iIx-xg-yYf"/>
+                        <outlet property="thumbImg" destination="Opi-U4-Uz8" id="wcy-Wx-pKF"/>
+                        <outlet property="titleField" destination="fAP-CW-jur" id="cyy-nd-FCG"/>
+                        <outlet property="typePicker" destination="qpJ-NQ-l2P" id="iKw-90-xSL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4X-ZA-Hxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
