@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate {
+class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UITextFieldDelegate {
     // IBOutlets
     @IBOutlet weak var thumbImg: UIImageView!
     @IBOutlet weak var titleField: CustomTextField!
@@ -40,6 +40,12 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
+        titleField.delegate = self
+        priceField.delegate = self
+        detailsField.delegate = self
+        
+        addDoneButton()
+        
         generateTestComponents()
         getStores()
         getTypes()
@@ -50,6 +56,9 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
         if let topItem = navigationController?.navigationBar.topItem{
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         }
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     // pickerView
@@ -120,6 +129,14 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
         present(imagePicker, animated: true, completion: nil)
     }
     
+    // textField
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        titleField.resignFirstResponder()
+        priceField.resignFirstResponder()
+        detailsField.resignFirstResponder()
+        return true
+    }
+    
     // custom functions
     func getStores(){
         let fetchRequest: NSFetchRequest<Store> = Store.fetchRequest()
@@ -171,6 +188,14 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
                 }while(type_index < types.count)
             }
         }
+    }
+    func addDoneButton(){
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: view, action: #selector(UIView.endEditing(_:)))
+        keyboardToolbar.items = [flexBarButton, doneBarButton]
+        priceField.inputAccessoryView = keyboardToolbar
     }
     func generateTestComponents(){
         let fetchRequest: NSFetchRequest<Generated> = Generated.fetchRequest()

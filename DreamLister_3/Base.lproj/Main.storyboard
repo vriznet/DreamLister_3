@@ -46,7 +46,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsl-Uh-SEJ">
-                                                    <rect key="frame" x="10" y="10" width="300" height="130"/>
+                                                    <rect key="frame" x="10" y="10" width="355" height="130"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePick" translatesAutoresizingMaskIntoConstraints="NO" id="s8f-N9-JNs">
                                                             <rect key="frame" x="10" y="4" width="100" height="100"/>
@@ -56,7 +56,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aM-cp-m0M">
-                                                            <rect key="frame" x="120" y="4" width="170" height="21"/>
+                                                            <rect key="frame" x="120" y="4" width="225" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="nKG-Q6-NVQ"/>
                                                             </constraints>
@@ -65,7 +65,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvW-oq-bXk">
-                                                            <rect key="frame" x="120" y="33" width="170" height="21"/>
+                                                            <rect key="frame" x="120" y="33" width="225" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="hsP-dt-6Y6"/>
                                                             </constraints>
@@ -74,7 +74,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4Na-JD-1BC">
-                                                            <rect key="frame" x="120" y="62" width="170" height="19.5"/>
+                                                            <rect key="frame" x="120" y="62" width="225" height="19.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="42" id="U2C-BP-u9W"/>
                                                             </constraints>
