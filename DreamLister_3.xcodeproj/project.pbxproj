@@ -25,6 +25,7 @@
 		9B66C75A20E8B9D10074F17B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66C75920E8B9D10074F17B /* CustomTextField.swift */; };
 		9B66C75C20E8E8F50074F17B /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66C75B20E8E8F50074F17B /* ItemCell.swift */; };
 		9B66C75E20E8EEF40074F17B /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66C75D20E8EEF40074F17B /* MaterialView.swift */; };
+		9B66C76020E8F09E0074F17B /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66C75F20E8F09E0074F17B /* ItemDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		9B66C75920E8B9D10074F17B /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9B66C75B20E8E8F50074F17B /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		9B66C75D20E8EEF40074F17B /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		9B66C75F20E8F09E0074F17B /* ItemDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				9B66C73020E8B6AF0074F17B /* MainVC.swift */,
+				9B66C75F20E8F09E0074F17B /* ItemDetailsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				9B66C75220E8B8DC0074F17B /* Store+CoreDataProperties.swift in Sources */,
 				9B66C72F20E8B6AF0074F17B /* AppDelegate.swift in Sources */,
 				9B66C75120E8B8DC0074F17B /* Store+CoreDataClass.swift in Sources */,
+				9B66C76020E8F09E0074F17B /* ItemDetailsVC.swift in Sources */,
 				9B66C75020E8B8DC0074F17B /* ItemType+CoreDataProperties.swift in Sources */,
 				9B66C75A20E8B9D10074F17B /* CustomTextField.swift in Sources */,
 				9B66C74E20E8B8DC0074F17B /* Item+CoreDataProperties.swift in Sources */,
