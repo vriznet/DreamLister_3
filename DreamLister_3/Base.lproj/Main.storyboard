@@ -94,6 +94,9 @@
                                                         <constraint firstItem="s8f-N9-JNs" firstAttribute="leading" secondItem="tsl-Uh-SEJ" secondAttribute="leading" constant="10" id="qdT-un-cVF"/>
                                                         <constraint firstItem="s8f-N9-JNs" firstAttribute="top" secondItem="tsl-Uh-SEJ" secondAttribute="top" constant="4" id="vML-DO-5bw"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -103,6 +106,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="tsl-Uh-SEJ" secondAttribute="trailing" constant="10" id="wZk-zk-OnQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="detailsLbl" destination="4Na-JD-1BC" id="bcF-uG-dpT"/>
                                             <outlet property="priceLbl" destination="kvW-oq-bXk" id="WJD-Mk-CZ7"/>
