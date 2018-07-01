@@ -24,7 +24,6 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UITableViewDeleg
         tableView.delegate = self
         tableView.dataSource = self
         
-        generateTestData()
         attemptFetch()
     }
     
@@ -113,16 +112,6 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UITableViewDeleg
     func configureCell(cell: ItemCell, indexPath: IndexPath){
         let item = controller.object(at: indexPath)
         cell.configureCell(item: item)
-    }
-    func generateTestData(){
-        let item1 = Item(context: context)
-        item1.title = "Surface Book 2"
-        item1.price = 3999
-        item1.details = "Finally I got this!"
-        let item2 = Item(context: context)
-        item2.title = "BMW Z4"
-        item2.price = 100000
-        item2.details = "My First Dream Car"
     }
 }
 

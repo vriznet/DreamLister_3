@@ -64,6 +64,26 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
     }
     
     // IBActions
+    @IBAction func savePressed(_ sender: UIButton) {
+        let item = Item(context: context)
+        if let title = titleField.text{
+            item.title = title
+        }
+        if let price = priceField.text{
+            item.price = (price as NSString).doubleValue
+        }
+        if let details = detailsField.text{
+            item.details = details
+        }
+        
+        item.toStore = stores[storePicker.selectedRow(inComponent: 0)]
+        item.toItemType = types[typePicker.selectedRow(inComponent: 0)]
+        
+        ad.saveContext()
+        
+        navigationController?.popViewController(animated: true)
+    }
+    
     
     // custom functions
     func getStores(){
@@ -95,7 +115,6 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
             print(error)
         }
         let IsGenerated = self.isGenerated.count
-        print(IsGenerated)
         
         if IsGenerated == 0{
             let store1 = Store(context: context)
@@ -119,8 +138,6 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
             ad.saveContext()
             let isGenerated = Generated(context: context)
             isGenerated.isGenerated = true
-        }else{
-            print("yeah")
         }
     }
 }
