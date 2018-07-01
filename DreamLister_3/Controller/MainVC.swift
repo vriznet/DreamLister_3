@@ -50,7 +50,19 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UITableViewDeleg
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let items = controller.fetchedObjects , items.count > 0 {
+            let item = items[indexPath.row]
+            performSegue(withIdentifier: "editItem", sender: item)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editItem"{
+            if let destination = segue.destination as? ItemDetailsVC{
+                if let item = sender as? Item{
+                    destination.itemToEdit = item
+                }
+            }
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150

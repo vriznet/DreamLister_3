@@ -24,6 +24,8 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
     var types = [ItemType]()
     var isGenerated = [Generated]()
     
+    var itemToEdit: Item!
+    
     // overrided ViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,9 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
         generateTestComponents()
         getStores()
         getTypes()
+        if itemToEdit != nil{
+            loadItemData()
+        }
         
         if let topItem = navigationController?.navigationBar.topItem{
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
@@ -65,7 +70,12 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
     
     // IBActions
     @IBAction func savePressed(_ sender: UIButton) {
-        let item = Item(context: context)
+        let item: Item!
+        if itemToEdit != nil{
+            item = itemToEdit
+        }else{
+            item = Item(context: context)
+        }
         if let title = titleField.text{
             item.title = title
         }
@@ -104,6 +114,36 @@ class ItemDetailsVC: UIViewController, NSFetchedResultsControllerDelegate, UINav
         }catch{
             let error = error as NSError
             print(error)
+        }
+    }
+    func loadItemData(){
+        if let item = itemToEdit{
+            titleField.text = item.title
+            priceField.text = "\(item.price)"
+            detailsField.text = item.details
+            
+            if let store = item.toStore{
+                var store_index = 0
+                repeat{
+                    let s = stores[store_index]
+                    if s.name == store.name{
+                        storePicker.selectRow(store_index, inComponent: 0, animated: true)
+                        break
+                    }
+                    store_index += 1
+                }while(store_index < stores.count)
+            }
+            if let type = item.toItemType{
+                var type_index = 0
+                repeat{
+                    let t = types[type_index]
+                    if t.type == type.type{
+                        typePicker.selectRow(type_index, inComponent: 0, animated: true)
+                        break
+                    }
+                    type_index += 1
+                }while(type_index < types.count)
+            }
         }
     }
     func generateTestComponents(){
